@@ -155,7 +155,7 @@
                     <ListView
                         android:id="@+id/historyStock"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content" />
                 </LinearLayout>
 
             </FrameLayout>
@@ -174,10 +174,10 @@
         android:id="@+id/pos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_marginLeft="5dp"
         android:layout_centerInParent="true"
+        android:layout_marginLeft="5dp"
         android:background="#3d566e"
+        android:gravity="center"
         android:text="POS"
         android:textColor="#fff"
         android:textStyle="italic"

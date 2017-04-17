@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.InputType;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,9 +19,11 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.zxing.integration.android.IntentIntegrator;
+import com.google.zxing.integration.android.IntentResult;
+
 import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.HashMap;
 
 import in.co.dreamguys.wandt.util.DatabaseHelper;
 
@@ -74,8 +75,8 @@ public class StockDeliveryScan extends Activity implements View.OnClickListener 
     public void onBackPressed() {
         super.onBackPressed();
         if (scan_switch.contentEquals("CAMERA")) {
-            //Intent so = new Intent(StockDeliveryScan.this, MainStockItem.class);
-            //startActivity(so);
+            Intent so = new Intent(StockDeliveryScan.this, MainStockItem.class);
+            startActivity(so);
             finish();
         }
     }
@@ -84,27 +85,8 @@ public class StockDeliveryScan extends Activity implements View.OnClickListener 
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.deliveryScan:
-                /*IntentIntegrator integrator = new IntentIntegrator(StockDeliveryScan.this);
+                IntentIntegrator integrator = new IntentIntegrator(StockDeliveryScan.this);
                 integrator.initiateScan();
-*/
-                Intent intent = new Intent("com.summi.scan");
-                intent.setPackage("com.sunmi.sunmiqrcodescanner");
-                intent.putExtra("CURRENT_PPI", 0X0003);//The current preview resolution ,PPI_1920_1080 = 0X0001;PPI_1280_720 = 0X0002;PPI_BEST = 0X0003;
-
-                intent.putExtra("PLAY_SOUND", true);// Prompt tone after scanning  ,default true
-
-                intent.putExtra("PLAY_VIBRATE", false);//vibrate after scanning,default false,only support M1 right now.
-
-                intent.putExtra("IDENTIFY_INVERSE_QR_CODE", true);//Whether to identify inverse code
-
-                intent.putExtra("IDENTIFY_MORE_CODE", false);// Whether to identify several code，default false
-
-                intent.putExtra("IS_SHOW_SETTING", true);// Wether display set up button  at the top-right corner，default true
-
-                intent.putExtra("IS_SHOW_ALBUM", true);// Wether display album，default true
-                startActivityForResult(intent, 1001);
-
-
                 break;
             case R.id.deliveryProceed:
                 if (deliveryItem != null) {
@@ -191,7 +173,7 @@ public class StockDeliveryScan extends Activity implements View.OnClickListener 
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-    /*    IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
+        IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
         if (result != null) {
             String contents = result.getContents();
             if (contents != null) {
@@ -249,8 +231,8 @@ public class StockDeliveryScan extends Activity implements View.OnClickListener 
             //System.out.println("scanned barcode: "+contents);
         } else {
             Toast.makeText(getApplicationContext(), "Invalid Product", Toast.LENGTH_LONG).show();
-        }else*/
-        if (requestCode == 1001 && data != null) {
+        }
+       /* if (requestCode == 1001 && data != null) {
             Bundle bundle = data.getExtras();
             ArrayList<HashMap<String, String>> result = (ArrayList<HashMap<String, String>>) bundle.getSerializable("data");
 
@@ -260,7 +242,7 @@ public class StockDeliveryScan extends Activity implements View.OnClickListener 
                 Log.i("sunmi", hashMap.get("TYPE"));//this is the type of the code
                 Log.i("sunmi", hashMap.get("VALUE"));//this is the result of the code
             }
-        }
+        }*/
         super.onActivityResult(requestCode, resultCode, data);
     }
 

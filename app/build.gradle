@@ -26,12 +26,11 @@ android {
 
     productFlavors {
 
-        withMobile{
+        withMobile {
 
         }
 
-        iOTMobile{
-
+        iOTMobile {
         }
 
 
@@ -51,10 +50,10 @@ dependencies {
     compile 'com.journeyapps:zxing-android-embedded:3.0.3@aar'
     compile 'com.google.zxing:core:3.2.0'
     compile 'com.isseiaoki:simplecropview:1.0.16'
-    compile ('org.apache.httpcomponents:httpmime:4.3'){
+    compile('org.apache.httpcomponents:httpmime:4.3') {
         exclude group: 'org.apache.httpcomponents', module: 'httpclient'
     }
-    compile ('org.apache.httpcomponents:httpcore:4.4.1'){
+    compile('org.apache.httpcomponents:httpcore:4.4.1') {
         exclude group: 'org.apache.httpcomponents', module: 'httpclient'
     }
     /*compile('org.apache.httpcomponents:httpmime:4.3') {

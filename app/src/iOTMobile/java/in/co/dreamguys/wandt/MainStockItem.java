@@ -45,6 +45,7 @@ import in.co.dreamguys.wandt.util.ESCUtil;
 
 import static in.co.dreamguys.wandt.R.id.pos;
 
+
 public class MainStockItem extends Activity implements View.OnClickListener, CompoundButton.OnCheckedChangeListener, SwipeRefreshLayout.OnRefreshListener {
 
     public static final String PREFS_NAME = "WandTPrefs";
@@ -131,8 +132,6 @@ public class MainStockItem extends Activity implements View.OnClickListener, Com
         swipeRefreshLayout.setOnRefreshListener(this);
         title = (TextView) findViewById(R.id.toolbar_title);
         title.setText("Home");
-        mPos = (Button) findViewById(pos);
-        mPos.setOnClickListener(this);
         delivery_btn = (Button) findViewById(R.id.delivery_btn);
         delivery_btn.setOnClickListener(this);
         return_btn = (Button) findViewById(R.id.return_btn);
@@ -197,30 +196,12 @@ public class MainStockItem extends Activity implements View.OnClickListener, Com
             case R.id.delivery_btn:
                 Intent delivery_scan;
                 delivery_scan = new Intent(MainStockItem.this, StockDeliveryScan.class);
-                /*if (scan_toggle.contentEquals("BT")) {
-                    editor.putString("out_page", "deliveryBtn");
-                    editor.apply();
-                    delivery_scan = new Intent(MainStockItem.this, BTScan.class);
-                } else {
-                    editor.putString("out_page", "");
-                    editor.apply();
-                    delivery_scan = new Intent(MainStockItem.this, StockDeliveryScan.class);
-                }*/
                 editor.putString("out_page", "");
                 editor.apply();
                 startActivity(delivery_scan);
                 break;
             case R.id.return_btn:
                 Intent return_scan;
-             /*   if (scan_toggle.contentEquals("BT")) {
-                    editor.putString("out_page", "returnBtn");
-                    editor.apply();
-                    return_scan = new Intent(MainStockItem.this, BTScan.class);
-                } else {
-                    editor.putString("out_page", "");
-                    editor.apply();
-                    return_scan = new Intent(MainStockItem.this, StockReturnScan.class);
-                }*/
                 return_scan = new Intent(MainStockItem.this, StockReturnScan.class);
                 editor.putString("out_page", "");
                 editor.apply();
@@ -274,10 +255,6 @@ public class MainStockItem extends Activity implements View.OnClickListener, Com
         }
 
     }
-
-
-
-
 
 
     @Override
