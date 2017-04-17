@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/isId"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_row_selector"
+    android:padding="5dp">
+
+    <TableLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:id="@+id/print_tbl"
+        android:shrinkColumns="*"
+        android:stretchColumns="*">
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:paddingBottom="10dp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <TextView
+                android:id="@+id/_item"
+                android:text="Item"
+                android:layout_width="50dip"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_span="1"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/_qty"
+                android:gravity="center"
+                android:text="Qty"
+                android:layout_width="30dip"
+                android:layout_height="wrap_content"
+                android:layout_span="1"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/_price"
+                android:textColor="@color/prod_qty"
+                android:text="Price"
+                android:textStyle="bold"
+                android:layout_span="1"
+                android:textSize="14sp"
+                android:layout_width="20dip"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="right"/>
+        </TableRow>
+
+    </TableLayout>
+
+</RelativeLayout>

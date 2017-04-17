@@ -1,0 +1,48 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.2"
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+    defaultConfig {
+        applicationId "in.co.dreamguys.wandt"
+        minSdkVersion 14
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile files('libs/btsdk.jar')
+    compile files('libs/universal-image-loader-1.8.7-snapshot-with-sources.jar')
+    //noinspection GradleCompatible
+    compile 'com.android.support:design:22.2.0'
+    compile 'com.android.support:appcompat-v7:21.0.3'
+    compile 'com.weiwangcn.betterspinner:library-material:1.1.0'
+    compile 'com.journeyapps:zxing-android-embedded:3.0.3@aar'
+    compile 'com.google.zxing:core:3.2.0'
+    compile 'com.isseiaoki:simplecropview:1.0.16'
+    compile ('org.apache.httpcomponents:httpmime:4.3'){
+        exclude group: 'org.apache.httpcomponents', module: 'httpclient'
+    }
+    compile ('org.apache.httpcomponents:httpcore:4.4.1'){
+        exclude group: 'org.apache.httpcomponents', module: 'httpclient'
+    }
+    /*compile('org.apache.httpcomponents:httpmime:4.3') {
+        exclude module: "httpclient"
+    }*/
+}

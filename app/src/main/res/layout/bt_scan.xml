@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/tool_bt"
+        layout="@layout/toolbar"></include>
+
+    <EditText
+        android:id="@+id/btVal"
+        android:text=""
+        android:singleLine="true"
+        android:lines="1"
+        android:inputType="text"
+        android:layout_below="@+id/tool_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"/>
+
+    <ListView
+        android:id="@+id/btProducts"
+        android:layout_below="@+id/btVal"
+        android:layout_above="@+id/bt_footer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></ListView>
+
+    <!--scan & proceed buttons-->
+    <LinearLayout
+        android:id="@+id/bt_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+        <Button
+            android:id="@+id/btProceed"
+            android:textColor="#fff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Scan Complete"
+            android:layout_gravity="right"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:visibility="visible"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/lookup"
+            android:background="#7f8c8d"/>
+    </LinearLayout>
+</RelativeLayout>

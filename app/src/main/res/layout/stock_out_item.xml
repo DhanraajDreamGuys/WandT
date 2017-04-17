@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_row_selector"
+    android:padding="8dp">
+
+    <!-- Thumbnail Image -->
+    <ImageView
+        android:id="@+id/stock_icon"
+        android:layout_width="64dip"
+        android:layout_height="64dip"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="8dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/shopout"/>
+
+    <!-- Stock ID -->
+    <TextView
+        android:id="@+id/stockoutID"
+        android:text="Stock ID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/stock_icon"
+        android:layout_toRightOf="@+id/stock_icon"
+        android:textSize="@dimen/title"
+        android:textStyle="bold" />
+    <!-- Quantity -->
+    <TextView
+        android:id="@+id/stockTotal"
+        android:text="Quantity : 100"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/stockoutID"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/stock_icon"
+        android:textSize="@dimen/rating" />
+    <!-- date -->
+    <TextView
+        android:id="@+id/stockDate"
+        android:text="Date: 11-12-2015"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/stockTotal"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/stock_icon"
+        android:textSize="@dimen/rating" />
+
+    <!-- Price-->
+    <TextView
+        android:id="@+id/stockPrice"
+        android:text="Amount : 100.00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/year"
+        android:textSize="@dimen/year" />
+
+</RelativeLayout>

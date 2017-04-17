@@ -1,0 +1,16 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="0dip"
+    android:layout_height="55dip"
+    android:layout_weight="1"
+    android:orientation="vertical"
+    android:padding="5dp"
+
+    android:weightSum="55">
+    <ImageView
+        android:src="@drawable/u"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:id="@+id/myPointsTabIcon" />
+</RelativeLayout>

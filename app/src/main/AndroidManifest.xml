@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="in.co.dreamguys.wandt"
+    android:versionCode="1"
+    android:versionName="1.0">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme2" >
+        <activity
+            android:name=".ApiSetup" android:label="@string/app_name" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".LoginActivity" android:label="@string/app_name" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.LOGINACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainStockItem" android:label="@string/app_name" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".StockOut" android:label="@string/app_name" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".StockOutDetails" android:label="@string/app_name" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".StockOption" android:label="@string/app_name" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".StockDeliveryScan" android:label="@string/app_name" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".StockOutDelivery" android:label="@string/app_name" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".StockReturnScan" android:label="@string/app_name" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".StockOutReturn" android:label="@string/app_name" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".OrderDetails" android:label="@string/app_name" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".SalesDetails" android:label="@string/app_name" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".BTScan" android:label="@string/app_name" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+        <activity android:name=".UploadStock" android:label="@string/app_name" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".util.PhotoCropper" android:label="@string/app_name" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".util.DeviceListActivity" android:label="select a device to connect" android:theme="@android:style/Theme.Dialog">
+        </activity>
+        <activity android:name=".OrderPrinter" android:label="@string/app_name" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".ShopOrder" android:label="@string/app_name" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".ShopInvoice" android:label="@string/app_name" android:screenOrientation="portrait">
+        </activity>
+    </application>
+</manifest>

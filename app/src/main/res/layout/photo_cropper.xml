@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_root"
+    android:background="@drawable/crop"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"></include>
+
+    <com.isseiaoki.simplecropview.CropImageView
+        android:id="@+id/cropImageView"
+        android:layout_below="@id/toolbar"
+        android:paddingTop="32dp"
+        android:paddingBottom="64dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:cropMode="ratio_fit_image"
+        custom:handleColor="@color/handle"
+        custom:guideColor="@color/guide"
+        custom:overlayColor="@color/overlay"
+        custom:frameColor="@color/frame"
+        custom:handleSize="8dp"
+        custom:touchPadding="8dp"
+        custom:handleShowMode="show_always"
+        custom:guideShowMode="show_on_touch"
+        custom:minFrameSize="150dp"
+        custom:frameStrokeWeight="1dp"
+        custom:guideStrokeWeight="1dp" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp"
+        android:layout_alignBottom="@id/cropImageView"
+        android:layout_centerHorizontal="true">
+        <Button
+            android:id="@+id/buttonChangeImage"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginRight="8dp"
+            android:padding="8dp"
+            android:text="CHANGE"
+            android:textSize="@dimen/text_size_s"
+            android:textColor="@color/base"
+            android:background="@drawable/change_btn" />
+
+        <Button
+            android:id="@+id/buttonRotateImage"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height"
+            android:padding="8dp"
+            android:layout_marginRight="8dp"
+            android:text="ROTATE"
+            android:textSize="@dimen/text_size_s"
+            android:textColor="@color/base"
+            android:background="@drawable/rotate_btn" />
+
+        <Button
+            android:id="@+id/buttonDone"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height"
+            android:padding="8dp"
+            android:text="DONE"
+            android:textSize="@dimen/text_size_s"
+            android:textColor="@color/base"
+            android:background="@drawable/done_btn" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sds"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/tool_ds"
+        layout="@layout/toolbar"></include>
+
+
+    <ListView
+        android:id="@+id/deliveryProducts"
+        android:layout_below="@+id/tool_ds"
+        android:layout_above="@+id/ds_footer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></ListView>
+
+
+    <!--scan & proceed buttons-->
+    <LinearLayout
+        android:id="@+id/ds_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:id="@+id/deliveryScan"
+            android:textColor="#fff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Scan"
+            android:layout_gravity="left"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="#7f8c8d"/>
+
+        <Button
+            android:id="@+id/deliveryProceed"
+            android:textColor="#fff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Proceed"
+            android:layout_gravity="right"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:visibility="visible"
+            android:layout_weight="1"
+            android:background="#c0392b"/>
+    </LinearLayout>
+</RelativeLayout>

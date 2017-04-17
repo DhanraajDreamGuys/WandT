@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/isId"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_row_selector"
+    android:padding="5dp">
+
+    <TableLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:id="@+id/first_row"
+        android:shrinkColumns="*"
+        android:stretchColumns="*">
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:paddingBottom="10dp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <TextView
+                android:id="@+id/prod_name"
+                android:text="Product Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_span="2"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/prod_id"
+                android:textColor="@color/prod_qty"
+                android:text="#0"
+                android:textStyle="bold"
+                android:layout_span="1"
+                android:textSize="18sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="right"/>
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:paddingBottom="5dp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <TextView
+                android:id="@+id/prod_code"
+                android:text="Bar Code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_span="3"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+            <EditText
+                android:id="@+id/prod_price"
+                android:layout_width="80dip"
+                android:layout_height="40dip"
+                android:layout_alignParentLeft="true"
+                android:layout_span="2"
+                android:gravity="center"
+                android:text="0"
+                android:inputType="numberDecimal"/>
+
+            <Spinner
+                android:id="@+id/prod_qty"
+                android:layout_width="100dip"
+                android:layout_height="40dip"
+                android:layout_span="1"
+                android:layout_gravity="right"
+                android:layout_alignParentRight="true"
+                android:gravity="center" />
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>

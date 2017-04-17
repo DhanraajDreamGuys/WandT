@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sds"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/tool_ds"
+        layout="@layout/toolbar"></include>
+
+    <ListView
+        android:id="@+id/itemList"
+        android:layout_below="@+id/tool_ds"
+        android:layout_above="@+id/ds_footer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></ListView>
+
+    <LinearLayout
+        android:id="@+id/ds_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <Button
+            android:id="@+id/connect_btn"
+            android:textColor="#fff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Connect"
+            android:layout_gravity="left"
+            android:layout_marginRight="5dp"
+            android:textStyle="italic"
+            android:layout_weight="1"
+            android:background="#3d566e"/>
+
+        <Button
+            android:id="@+id/print_btn"
+            android:textColor="#fff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Print"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="#16a085"/>
+
+        <Button
+            android:id="@+id/closeBtn"
+            android:textColor="#fff"
+            android:textStyle="italic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Close"
+            android:layout_gravity="right"
+            android:layout_marginLeft="5dp"
+            android:visibility="visible"
+            android:layout_weight="1"
+            android:background="#e74c3c"/>
+    </LinearLayout>
+    </RelativeLayout>

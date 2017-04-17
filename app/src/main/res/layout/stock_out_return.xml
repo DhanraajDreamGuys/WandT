@@ -1,0 +1,169 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/tool_delivery"
+        layout="@layout/toolbar"></include>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.6"
+        android:orientation="vertical"
+        android:background="#fff"
+        android:padding="16dp"
+        android:layout_margin="16dp">
+        <TableLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/thumbnail"
+            android:id="@+id/first_row"
+            android:shrinkColumns="*"
+            android:stretchColumns="*">
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:paddingBottom="20dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:id="@+id/productName"
+                    android:text="#STOCK ID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_span="2"
+                    android:textSize="16sp"
+                    android:textStyle="bold|italic"/>
+                <TextView
+                    android:id="@+id/pl_stock_id"
+                    android:textColor="@color/prod_qty"
+                    android:text="0"
+                    android:textStyle="bold"
+                    android:layout_span="1"
+                    android:textSize="18sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:paddingBottom="20dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:id="@+id/productQty"
+                    android:text="ITEMS (QTY)"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_span="2"
+                    android:textSize="16sp"
+                    android:textStyle="bold|italic"/>
+                <TextView
+                    android:id="@+id/pl_stock_qty"
+                    android:textColor="@color/prod_qty"
+                    android:text="100"
+                    android:textStyle="bold"
+                    android:layout_span="1"
+                    android:textSize="18sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow3"
+                android:paddingBottom="20dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:id="@+id/merchandise"
+                    android:text="MERCHANDISE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_span="2"
+                    android:textSize="16sp"
+                    android:textStyle="bold|italic"/>
+                <TextView
+                    android:id="@+id/pl_stock_amt"
+                    android:textColor="@color/prod_qty"
+                    android:text="10.00"
+                    android:textStyle="bold"
+                    android:layout_span="1"
+                    android:textSize="18sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="30dp"
+                android:background="@android:color/darker_gray"/>
+
+            <TableRow
+                android:id="@+id/tableRow5"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:id="@+id/totalAmt"
+                    android:text="TOTAL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_span="2"
+                    android:textSize="16sp"
+                    android:textStyle="bold|italic"/>
+                <TextView
+                    android:id="@+id/pl_sub"
+                    android:textColor="@color/prod_qty"
+                    android:text="10.00"
+                    android:textStyle="bold"
+                    android:layout_span="1"
+                    android:textSize="18sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right"/>
+            </TableRow>
+
+        </TableLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.4"
+        android:orientation="vertical"
+
+        android:background="#fff"
+        android:padding="16dp"
+        android:layout_margin="16dp">
+        <Button
+            android:id="@+id/returnOrderBtn"
+            android:layout_below="@+id/shipWrapper"
+            android:layout_marginTop="10dp"
+            android:layout_centerInParent="true"
+            android:textColor="#ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RETURN STOCK"
+            android:background="#7f8c8d"/>
+    </RelativeLayout>
+</LinearLayout>
